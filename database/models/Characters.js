@@ -8,8 +8,8 @@ const charactersSchema = new Schema ({
     species:String,
     gender:String,
     location:{
-        name:String,
-        url:String,
+        ref: "Locations",
+        type: mongoose.Schema.Types.ObjectId,
     },
     image:String,
 });
