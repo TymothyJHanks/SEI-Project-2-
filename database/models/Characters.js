@@ -3,7 +3,7 @@ const mongoose = require("../connection")
 const Schema = mongoose.Schema;
 
 const charactersSchema = new Schema ({
-    id:String,
+    id:Number,
     name:String,
     species:String,
     gender:String,
@@ -16,4 +16,4 @@ const charactersSchema = new Schema ({
 
 const Characters = mongoose.model("Characters", charactersSchema);
 
-module.exports = Person;
+module.exports = Characters;
