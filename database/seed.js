@@ -1,8 +1,8 @@
-// const Characters = require("./models/Characters")
+const Characters = require("./models/Characters")
 const Locations = require("./models/Locations")
 const Episodes = require("./models/Episodes")
 
-// const charactersJsonData = require('./characters.json')
+const charactersJsonData = require('./characters.json')
 const locationsJsonData = require('./locations.json')
 const episodesJsonData = require('./episodes.json')
 

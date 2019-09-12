@@ -6,7 +6,7 @@ const locationsJsonData = require("../database/locations.json");
 const episodesJsonData = require("../database/episodes.json");
 const charactersJsonData = require("../database/characters.json");
 
-//Episodes Seed Data
+//Episodes Seed Data //this goes first because the Locatons seed needs this before it starts its seeding process
 Episodes.deleteMany({}).then(() => {
   console.log("deleted all episodes");
   //place create/delete/functions here
