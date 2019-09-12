@@ -12,7 +12,7 @@ const locationsSchema = new Schema ({
     dimension:String,
     url: String,
     episodes: {
-        type: Schema.Types.String,
+        type: Schema.Types.ObjectId,//change this back to .ObjectId for it not to break
         ref: "Episodes"
     }
 });
