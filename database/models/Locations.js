@@ -11,8 +11,9 @@ const locationsSchema = new Schema ({
     type:String,
     dimension:String,
     url: String,
-    created:{
-        ref:
+    episodes: {
+        type: Schema.Types.String,
+        ref: "Episodes"
     }
 });
 

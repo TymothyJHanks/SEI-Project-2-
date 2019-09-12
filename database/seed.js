@@ -1,9 +1,9 @@
 // const Characters = require("./models/Characters")
-// const Locations = require("./models/Locations")
+const Locations = require("./models/Locations")
 const Episodes = require("./models/Episodes")
 
 // const charactersJsonData = require('./characters.json')
-// const locationsJsonData = require('./locations.json')
+const locationsJsonData = require('./locations.json')
 const episodesJsonData = require('./episodes.json')
 
 
@@ -22,20 +22,20 @@ const episodesJsonData = require('./episodes.json')
 //     })
 //   });
   
-//   //Locations Seed Data
-//   Locations.deleteMany({}).then(() => {
-//     console.log('deleted all locations')
-//     //place create/delete/functions here 
+  //Locations Seed Data
+  Locations.deleteMany({}).then(() => {
+    console.log('deleted all locations')
+    //place create/delete/functions here 
     
-//     Locations.create(locationsJsonData)
-//     .then(locations => {
-//       // Locations.save();
-//       console.log(locations);
-//     })
-//     .catch(err => {
-//       console.log(err)
-//     })
-//   });
+    Locations.create(locationsJsonData)
+    .then(locations => {
+      // Locations.save();
+      console.log(locations);
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  });
 
   //Episodes Seed Data
   Episodes.deleteMany({}).then(() => {
