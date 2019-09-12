@@ -5,7 +5,7 @@ mongoose.Promise = Promise
 const mongoURI = 'mongodb://localhost/rick-and-morty'
 
 mongoose
-.connect(mongoURI, { useNewUrlParser: true })
+.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then((conn) => {
 	console.log(`connected to mongodb on ${conn.connections[0].name} db`)
 })

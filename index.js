@@ -12,7 +12,7 @@ app.use("/api/characters/", charactersRoutes);
 app.use("/api/locations/", locationsRoutes);
 app.use("/api/episodes/", episodesRoutes);
 
-app.listen(8000, () => console.log("Everything is working on port 8000"))
+app.listen(8080, () => console.log("Everything is working on port 8080"))
 
 
 

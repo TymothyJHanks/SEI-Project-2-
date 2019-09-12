@@ -1,10 +1,11 @@
+const Characters = require("./models/Characters")
+const Locations = require("./models/Locations")
+const Episodes = require("./models/Episodes")
+
 const charactersJsonData = require('./characters.json')
 const locationsJsonData = require('./locations.json')
 const episodesJsonData = require('./episodes.json')
 
-const Characters = require("./models/Characters")
-const Locations = require("./models/Locations")
-const Episodes = require("./models/Episodes")
 
 //Charaters Seed Data 
 Characters.deleteMany({}).then(() => {
@@ -13,11 +14,11 @@ Characters.deleteMany({}).then(() => {
 
     Characters.create(charactersJsonData)
     .then(characters => {
-        //shows.save();
+      // Characters.save();
       console.log(characters);
     })
-    .catch(error => {
-      console.log(error)
+    .catch(err => {
+      console.log(err)
     })
   });
   
@@ -28,11 +29,11 @@ Characters.deleteMany({}).then(() => {
     
     Locations.create(locationsJsonData)
     .then(locations => {
-        //persons.save();
+      // Locations.save();
       console.log(locations);
     })
-    .catch(error => {
-      console.log(error)
+    .catch(err => {
+      console.log(err)
     })
   });
 
@@ -43,11 +44,11 @@ Characters.deleteMany({}).then(() => {
     
     Episodes.create(episodesJsonData)
     .then(episodes => {
-        //persons.save();
+      // Episodes.save();
       console.log(episodes);
     })
-    .catch(error => {
-      console.log(error)
+    .catch(err => {
+      console.log(err)
     })
   });
 
