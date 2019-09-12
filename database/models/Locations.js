@@ -1,6 +1,7 @@
 const mongoose = require("../connection")
 //add a require for the character model to reference 
-const charactersModel = require("./Characters");
+// const charactersModel = require("./Characters");
+const episodesModel = require("./Episodes");
 
 const Schema = mongoose.Schema;
 
@@ -10,6 +11,9 @@ const locationsSchema = new Schema ({
     type:String,
     dimension:String,
     url: String,
+    created:{
+        ref:
+    }
 });
 
 
@@ -17,6 +21,6 @@ const Locations = mongoose.model("Locations", locationsSchema);
 
 module.exports = Locations;
     // type:{
-    //     ref: `${charactersModel}`, //all you need to do is just copy and paste whats going on here in the locations section in the characters model
+    //     ref: `${episodesModel}`, //all you need to do is just copy and paste whats going on here in the locations section in the characters model
     //     type: Schema.Types.ObjectId
     // }, //want to reference the characters here so depending on the planet they will pop up

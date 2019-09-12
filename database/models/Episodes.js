@@ -1,5 +1,7 @@
 const mongoose = require("../connection")
 
+const locationsModel = require("./Locations");
+
 const Schema = mongoose.Schema;
 
 const episodesSchema = new Schema ({
@@ -8,6 +10,7 @@ const episodesSchema = new Schema ({
     air_date:String,
     episode:String,
     url: String,
+    created:String,
 });
 
 const Episodes = mongoose.model("Episodes", episodesSchema);
