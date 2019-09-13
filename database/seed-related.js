@@ -1,6 +1,6 @@
-const Characters = require("./models/Characters");
-const Locations = require("./models/Locations");
-const Episodes = require("./models/Episodes");
+const Characters = require("../database/models/Characters")
+const Locations = require("../database/models/Locations")
+const Episodes = require("../database/models/Episodes")
 
 const charactersJsonData = require("./characters.json");
 const locationsJsonData = require("./locations.json");
@@ -10,7 +10,6 @@ const episodesJsonData = require("./episodes.json");
 Characters.deleteMany({}).then(() => {
   console.log("deleted all characters");
   //place create/delete/functions here
-
   Characters.create(charactersJsonData)
     .then(characters => {
       // Characters.save();
@@ -27,14 +26,13 @@ Episodes.find({}).then(episodes => {
     let episodesJSON = episodesJsonData.find(
       episodesJSON => episodesJSON.name === episode.name
     );
-    Characters.findOne({ title: episodesJSON.charactersCreated }).then(
+    Characters.findOne({ name: episodesJSON.charactersCreated }).then(
       characters => {
         episode.characters = characters._id;
         episode.save();
-      }
-    );
+      }).catch(err => console.log(err));
   });
-});
+}).catch(err => console.log(err));
 
 Locations.deleteMany({}).then(() => {
   console.log("deleting all locations");
@@ -106,20 +104,20 @@ Locations.deleteMany({}).then(() => {
 //   });
 // });
 
-//Charaters Seed Data
-Characters.deleteMany({}).then(() => {
-  console.log("deleted all characters");
-  //place create/delete/functions here
+// //Charaters Seed Data
+// Characters.deleteMany({}).then(() => {
+//   console.log("deleted all characters");
+//   //place create/delete/functions here
 
-  Characters.create(charactersJsonData)
-    .then(characters => {
-      // Characters.save();
-      console.log(characters);
-    })
-    .catch(err => {
-      console.log(err);
-    });
-});
+//   Characters.create(charactersJsonData)
+//     .then(characters => {
+//       // Characters.save();
+//       console.log(characters);
+//     })
+//     .catch(err => {
+//       console.log(err);
+//     });
+// });
 
 // //Episodes Seed Data
 // Episodes.deleteMany({}).then(() => {
