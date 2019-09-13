@@ -34,7 +34,7 @@ const charactersData = charactersJsonData.map(characters => {
   console.log('deleted all episodes')
   //place create/delete/functions here 
   
-  Episodes.create(episodesJsonData)
+  Episodes.create(episodesSeedData)
   .then(episodes => {
     // Episodes.save();
     console.log(episodes);
@@ -52,7 +52,7 @@ Characters.deleteMany({}).then(() => {
   Characters.create(charactersJsonData)
   .then(characters => {
     // Characters.save();
-    console.log(characters);
+    // console.log(characters);
   })
   .catch(err => {
     console.log(err)
@@ -93,5 +93,5 @@ Characters.deleteMany({}).then(() => {
 //             })
 //             .catch(err => {
 //                 console.log(err)
-//             })
-//     })
+//    })
+//  })

@@ -7,7 +7,7 @@ const episodesSchema = new Schema ({
     air_date:String,
     episode:String,
     url: String,
-    charactersCreated: [{
+    characters: [{
         type: Schema.Types.ObjectId, 
         ref: "Characters"
     }],

@@ -6,45 +6,48 @@ const charactersJsonData = require("./characters.json");
 const locationsJsonData = require("./locations.json");
 const episodesJsonData = require("./episodes.json");
 
+
+//reference the characters from the characters.json file in this file
+//because we already have our database
+
+//get a specific property from characters json (id, name, status)
+//and put it inside the episodes.json data in the property field (characters)
+//which is also in our episodes model
 //Charaters Seed Data
-Characters.deleteMany({}).then(() => {
-  console.log("deleted all characters");
-  //place create/delete/functions here
-  Characters.create(charactersJsonData)
-    .then(characters => {
-      // Characters.save();
-      console.log(characters);
-    })
-    .catch(err => {
-      console.log(err);
-    });
+Characters.create(charactersJsonData)
+.then(characters => {
+  // Characters.save();
+  console.log(characters);
+})
+.catch(err => {
+  console.log(err);
 });
 
 Episodes.find({}).then(episodes => {
-  console.log(episodes);
-  episodes.forEach(episode => {
-    let episodesJSON = episodesJsonData.find(
-      episodesJSON => episodesJSON.name === episode.name
-    );
-    Characters.findOne({ name: episodesJSON.charactersCreated }).then(
-      characters => {
-        episode.characters = characters._id;
-        episode.save();
-      }).catch(err => console.log(err));
-  });
+console.log(episodes);
+episodes.forEach(episode => {
+let episodesJSON = episodesJsonData.find(
+  episodesJSON => episodesJSON.name === episode.name
+);
+Characters.findOne({ title: episodesJSON.charactersCreated }).then(
+  characters => {
+    episode.characters = characters._id;
+    episode.save();
+  }).catch(err => console.log(err));
+});
 }).catch(err => console.log(err));
 
-Locations.deleteMany({}).then(() => {
-  console.log("deleting all locations");
-  Locations.create(locationsJsonData)
-    .then(locations => {
-      // Episodes.save();
-      console.log(locations);
-    })
-    .catch(err => {
-      console.log(err);
-    });
+
+Locations.create(locationsJsonData)
+.then(locations => {
+  // Episodes.save();
+  console.log(locations);
+})
+.catch(err => {
+  console.log(err);
 });
+
+
 
 //characters need to load first
 //episodes loads 2nd that gets the data from characters and references them
