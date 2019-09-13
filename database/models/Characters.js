@@ -8,10 +8,6 @@ const charactersSchema = new Schema ({
     name:String,
     species:String,
     gender:String,
-    location:{ //in this use the same outline code in the locations model to have relate 
-        name:String,
-        url:String,
-    },
     image:String,
 });
 

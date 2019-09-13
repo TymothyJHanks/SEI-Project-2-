@@ -1,10 +1,10 @@
-const Characters = require("./models/Characters")
-const Locations = require("./models/Locations")
-const Episodes = require("./models/Episodes")
+const Characters = require("./models/Characters");
+const Locations = require("./models/Locations");
+const Episodes = require("./models/Episodes");
 
-const charactersJsonData = require('./characters.json')
-const locationsJsonData = require('./locations.json')
-const episodesJsonData = require('./episodes.json')
+const charactersJsonData = require('./characters.json');
+const locationsJsonData = require('./locations.json');
+const episodesJsonData = require('./episodes.json');
 
 //Episodes Seed Data
 Episodes.deleteMany({}).then(() => {
@@ -31,8 +31,7 @@ Locations.deleteMany({}).then(() => {
     .catch(err => {
       console.log(err);
     });
-  
-})
+});
 
 //Charaters Seed Data
 Characters.deleteMany({}).then(() => {
@@ -80,3 +79,16 @@ Characters.deleteMany({}).then(() => {
 //     });
 //   });
 // }).catch(err => console.log(err));
+
+// Locations.deleteMany({}).then(() => {
+//   console.log("deleting all locations")
+//   Locations.create(locationsJsonData)
+//     .then(locations => {
+//       // Episodes.save();
+//       console.log(locations);
+//     })
+//     .catch(err => {
+//       console.log(err);
+//     });
+  
+// })

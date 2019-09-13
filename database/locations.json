@@ -34,8 +34,8 @@
       "https://rickandmortyapi.com/api/character/394"
     ],
     "url": "https://rickandmortyapi.com/api/location/1",
-    "created": "2017-11-10T12:42:04.162Z",
-    "episodes": "Pilot"
+    "created": "2017-11-10T12:42:04.162Z"
+    
   },
   {
     "id": 2,
@@ -44,8 +44,8 @@
     "dimension": "unknown",
     "residents": ["https://rickandmortyapi.com/api/character/6"],
     "url": "https://rickandmortyapi.com/api/location/2",
-    "created": "2017-11-10T13:06:38.182Z",
-    "episodes": "Lawnmower Dog"
+    "created": "2017-11-10T13:06:38.182Z"
+    
   },
   {
     "id": 3,
@@ -146,8 +146,8 @@
       "https://rickandmortyapi.com/api/character/489"
     ],
     "url": "https://rickandmortyapi.com/api/location/3",
-    "created": "2017-11-10T13:08:13.191Z",
-    "episodes": "Anatomy Park"
+    "created": "2017-11-10T13:08:13.191Z"
+    
   },
   {
     "id": 4,
@@ -166,8 +166,8 @@
       "https://rickandmortyapi.com/api/character/395"
     ],
     "url": "https://rickandmortyapi.com/api/location/4",
-    "created": "2017-11-10T13:08:20.569Z",
-    "episodes": "M. Night Shaym-Aliens!"
+    "created": "2017-11-10T13:08:20.569Z"
+   
   },
   {
     "id": 5,
@@ -188,8 +188,8 @@
       "https://rickandmortyapi.com/api/character/300"
     ],
     "url": "https://rickandmortyapi.com/api/location/5",
-    "created": "2017-11-10T13:08:46.060Z",
-    "episodes": "Anatomy Park"
+    "created": "2017-11-10T13:08:46.060Z"
+    
   },
   {
     "id": 6,
@@ -259,8 +259,8 @@
       "https://rickandmortyapi.com/api/character/459"
     ],
     "url": "https://rickandmortyapi.com/api/location/6",
-    "created": "2017-11-10T13:09:09.102Z",
-    "episodes": "Rick Potion #9"
+    "created": "2017-11-10T13:09:09.102Z"
+   
   },
   {
     "id": 7,
@@ -273,8 +273,8 @@
       "https://rickandmortyapi.com/api/character/320"
     ],
     "url": "https://rickandmortyapi.com/api/location/7",
-    "created": "2017-11-10T13:09:17.136Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-10T13:09:17.136Z"
+    
   },
   {
     "id": 8,
@@ -294,8 +294,8 @@
       "https://rickandmortyapi.com/api/character/342"
     ],
     "url": "https://rickandmortyapi.com/api/location/8",
-    "created": "2017-11-10T13:09:22.551Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-10T13:09:22.551Z"
+    
 
   },
   {
@@ -310,8 +310,8 @@
       "https://rickandmortyapi.com/api/character/273"
     ],
     "url": "https://rickandmortyapi.com/api/location/9",
-    "created": "2017-11-10T13:09:29.566Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-10T13:09:29.566Z"
+    
 
   },
   {
@@ -321,8 +321,8 @@
     "dimension": "unknown",
     "residents": ["https://rickandmortyapi.com/api/character/33"],
     "url": "https://rickandmortyapi.com/api/location/10",
-    "created": "2017-11-18T11:21:51.643Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-18T11:21:51.643Z"
+    
 
   },
   {
@@ -332,8 +332,8 @@
     "dimension": "unknown",
     "residents": ["https://rickandmortyapi.com/api/character/35"],
     "url": "https://rickandmortyapi.com/api/location/11",
-    "created": "2017-11-18T11:26:03.325Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-18T11:26:03.325Z"
+    
 
   },
   {
@@ -343,8 +343,8 @@
     "dimension": "Cronenberg Dimension",
     "residents": [],
     "url": "https://rickandmortyapi.com/api/location/12",
-    "created": "2017-11-18T11:29:27.857Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-18T11:29:27.857Z"
+    
 
   },
   {
@@ -366,8 +366,8 @@
       "https://rickandmortyapi.com/api/character/387"
     ],
     "url": "https://rickandmortyapi.com/api/location/13",
-    "created": "2017-11-18T11:30:29.780Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-18T11:30:29.780Z"
+    
 
   },
   {
@@ -381,8 +381,8 @@
       "https://rickandmortyapi.com/api/character/400"
     ],
     "url": "https://rickandmortyapi.com/api/location/14",
-    "created": "2017-11-18T11:31:15.248Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-18T11:31:15.248Z"
+    
 
   },
   {
@@ -392,8 +392,8 @@
     "dimension": "unknown",
     "residents": [],
     "url": "https://rickandmortyapi.com/api/location/15",
-    "created": "2017-11-18T11:32:26.752Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-18T11:32:26.752Z"
+    
 
   },
   {
@@ -413,8 +413,8 @@
       "https://rickandmortyapi.com/api/character/460"
     ],
     "url": "https://rickandmortyapi.com/api/location/16",
-    "created": "2017-11-18T11:43:20.075Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-18T11:43:20.075Z"
+    
 
   },
   {
@@ -424,8 +424,8 @@
     "dimension": "Dimension 5-126",
     "residents": [],
     "url": "https://rickandmortyapi.com/api/location/17",
-    "created": "2017-11-18T11:41:08.486Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-18T11:41:08.486Z"
+    
 
   },
   {
@@ -444,8 +444,8 @@
       "https://rickandmortyapi.com/api/character/396"
     ],
     "url": "https://rickandmortyapi.com/api/location/18",
-    "created": "2017-11-18T11:46:22.933Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-18T11:46:22.933Z"
+    
 
   },
   {
@@ -455,8 +455,8 @@
     "dimension": "Replacement Dimension",
     "residents": [],
     "url": "https://rickandmortyapi.com/api/location/19",
-    "created": "2017-11-18T11:39:52.165Z",
-    "episodes": "Rasing Gazorpazorp"
+    "created": "2017-11-18T11:39:52.165Z"
+  
 
   },
   {
@@ -572,8 +572,6 @@
       "https://rickandmortyapi.com/api/character/493"
     ],
     "url": "https://rickandmortyapi.com/api/location/20",
-    "created": "2017-11-18T19:33:01.173Z",
-    "episodes": "Rasing Gazorpazorp"
-
+    "created": "2017-11-18T19:33:01.173Z"
   }
 ]

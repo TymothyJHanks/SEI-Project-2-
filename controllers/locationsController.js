@@ -3,10 +3,11 @@ const Locations = require("../database/models/Locations");
 module.exports = {
   index: (req, res) => {
     Locations.find({})
-    .populate("episodes")
+    // .populate("episodes")
     .then(location => {
       res.json(location);
     });
+  
   },
   create: (req, res) => {
     //its good practice to put this after the index or get request
