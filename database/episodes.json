@@ -603,7 +603,7 @@
   },
   {
     "id": 18,
-    "name": "Big Trouble in Little Sachez",
+    "name": "Big Trouble in Little Sanchez",
     "air_date": "September 13, 2015",
     "episode": "S02E07",
     "characters": [
@@ -702,9 +702,9 @@
       "https://rickandmortyapi.com/api/character/139",
       "https://rickandmortyapi.com/api/character/202",
       "https://rickandmortyapi.com/api/character/273",
-      "https://rickandmortyapi.com/api/character/341"
+      "Rick sanches"
     ],
     "url": "https://rickandmortyapi.com/api/episode/20",
-    "created": "2017-11-10T12:56:35.772Z",
+    "created": "2017-11-10T12:56:35.772Z"
   }
 ]

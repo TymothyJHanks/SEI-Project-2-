@@ -2,7 +2,9 @@ const Locations = require("../database/models/Locations");
 
 module.exports = {
   index: (req, res) => {
-    Locations.find({}).then(location => {
+    Locations.find({})
+    .populate("episodes")
+    .then(location => {
       res.json(location);
     });
   },

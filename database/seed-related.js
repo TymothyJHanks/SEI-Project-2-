@@ -1,12 +1,12 @@
-const Locations = require("../database/models/Locations");
-const Episodes = require("../database/models/Episodes");
-const Characters = require("../database/models/Characters");
+const Characters = require("./models/Characters")
+const Locations = require("./models/Locations")
+const Episodes = require("./models/Episodes")
 
-const locationsJsonData = require("../database/locations.json");
-const episodesJsonData = require("../database/episodes.json");
-const charactersJsonData = require("../database/characters.json");
+const charactersJsonData = require('./characters.json')
+const locationsJsonData = require('./locations.json')
+const episodesJsonData = require('./episodes.json')
 
-//Episodes Seed Data //this goes first because the Locatons seed needs this before it starts its seeding process
+//Episodes Seed Data
 Episodes.deleteMany({}).then(() => {
   console.log("deleted all episodes");
   //place create/delete/functions here
@@ -22,32 +22,17 @@ Episodes.deleteMany({}).then(() => {
 });
 
 Locations.deleteMany({}).then(() => {
-  Locations.find({}).then(locationsDB => {
-    // console.log(monarchsDB)
-
-    //iterate or loop through each monarch in monarchDB
-    locationsDB.forEach(locationsDocument => {
-      //monarchDocument is the single monarch from our database
-      //we will make a new variable to find the original JSON object
-      const locationsJson = locationsJsonData.find(
-        locationsJsonItem =>
-          locationsJsonItem.episodes === locationsDocument.episodes
-      );
-
-      // console.log(monarchDocument);
-      // console.log(monarchJson);
-
-      Episodes.findOne({ episode: locationsJson.episodes }).then(
-        episodesDocument => {
-          // console.log(monarchJson.kingdom);
-          // console.log(kingdomDocument);
-          locationsDocument.episodes = episodesDocument._id;
-          locationsDocument.save();
-        }
-      );
+  console.log("deleting all locations")
+  Locations.create(locationsJsonData)
+    .then(locations => {
+      // Episodes.save();
+      console.log(locations);
+    })
+    .catch(err => {
+      console.log(err);
     });
-  });
-});
+  
+})
 
 //Charaters Seed Data
 Characters.deleteMany({}).then(() => {
@@ -63,3 +48,35 @@ Characters.deleteMany({}).then(() => {
       console.log(err);
     });
 });
+
+//characters need to load first
+//episodes loads 2nd that gets the data from characters and references them
+//locations is logged third
+
+
+
+// Locations.deleteMany({}).then(() => {
+//   Locations.find({}).then(locationsDB => {
+//     // console.log(monarchsDB)
+
+//     //iterate or loop through each monarch in monarchDB
+//     locationsDB.forEach(locationsDocument => {
+//       //monarchDocument is the single monarch from our database
+//       //we will make a new variable to find the original JSON object
+//       const locationsJson = locationsJsonData.find(
+//         locationsJsonItem => locationsJsonItem.episodes === locationsDocument.episodes
+//       );
+
+//       // console.log(monarchDocument);
+//       // console.log(monarchJson);
+
+//       Episodes.findOne({ episode: locationsJsonData.episodes }).then(
+//         episodesDocument => {
+//           // console.log(monarchJson.kingdom);
+//           // console.log(kingdomDocument);
+//           locationsDocument.episodes = episodesDocument.id;
+//           locationsDocument.save();
+//         }).catch(err => console.log(err));
+//     });
+//   });
+// }).catch(err => console.log(err));

@@ -2,7 +2,9 @@ const Characters = require("../database/models/Characters");
 
 module.exports = {
   index: (req, res) => {
-    Characters.find({}).then(character => {
+    Characters.find({})
+    .populate("Episodes")
+    .then(character => {
       res.json(character);
     });
   },

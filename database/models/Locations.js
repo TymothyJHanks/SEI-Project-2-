@@ -1,7 +1,7 @@
 const mongoose = require("../connection")
 //add a require for the character model to reference 
 // const charactersModel = require("./Characters");
-const episodesModel = require("./Episodes");
+// const episodesModel = require("./Episodes");
 
 const Schema = mongoose.Schema;
 
@@ -11,10 +11,6 @@ const locationsSchema = new Schema ({
     type:String,
     dimension:String,
     url: String,
-    episodes: {
-        type: Schema.Types.ObjectId,//change this back to .ObjectId for it not to break
-        ref: "Episodes"
-    }
 });
 
 
