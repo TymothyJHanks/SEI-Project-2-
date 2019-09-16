@@ -3,36 +3,34 @@ const Locations = require("../database/models/Locations");
 module.exports = {
   index: (req, res) => {
     Locations.find({})
-    // .select("episodes")
-    // .populate('episodes')
-    // // .populate("episodesSchema")
     .then(location => {
       res.json(location);
     });
-  
   },
   create: (req, res) => {
     //its good practice to put this after the index or get request
     const newLocations = req.body;
-    Locations.create(newLocations).then(location => res.json(location));
+    Locations.create(newLocations).then(locations => res.json(locations));
   },
-  personId: (req, res) => {
-    Locations.findOne({ id: req.params.id }).then(location => res.json(location));
+  locationsId: (req, res) => {
+    Locations.findOne({ id: req.params.id })
+      .then(locations => res.json(locations));
   },
-  personName: (req, res) => {
+  locationsName: (req, res) => {
+    Locations.findOne({ name: req.params.name })
+      .then(locations => res.json(locations));
+  },
+  updateLocationsId: (req, res) => {
     const updatedLocations = req.body;
-    Locations.findOneAndUpdate({ name: req.params.name }, updatedLocations, {
+    Locations.findOneAndUpdate({ id: req.params.id }, updatedLocations, {
       new: true
-    }).then(location => res.json(location));
+    })
+      .then(locations => res.json(locations));
   },
-  editId: (req, res) => {
-    Locations.findOneAndDelete({ id: req.params.id }).then(location =>
-      res.json(location)
-    );
-  },
-  deleteId: (req, res) => {
-    Locations.findOneAndDelete({ id: req.params.id }).then(location =>
-      res.json(location)
+  deleteLocationsId: (req, res) => {
+    Locations.findOneAndDelete({ id: req.params.id })
+    .then(locations =>
+      res.json(locations)
     );
   }
 };
