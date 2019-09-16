@@ -2,7 +2,13 @@ const mongoose = require('mongoose')
 
 mongoose.Promise = Promise
 
-const mongoURI = 'mongodb://localhost/rick-and-morty'
+let mongoURI = "";
+
+if (process.env.NODE_ENV === "production") {
+	mongoURI = process.env.DB_URL;
+  } else {
+	mongoURI = "mongodb://localhost/rick-and-morty";
+  }
 
 mongoose
 .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
